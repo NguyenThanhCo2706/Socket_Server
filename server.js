@@ -30,6 +30,6 @@ io.on("connection", (socket) => {
     })
 })
 
-server.listen(port, () => {
-    console.log('http://localhost:%d', process.env.PORT || port);
+server.listen(process.env.PORT || port, () => {
+    console.log('http://localhost:%d', port);
 })
