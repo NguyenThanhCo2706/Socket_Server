@@ -31,5 +31,5 @@ io.on("connection", (socket) => {
 })
 
 server.listen(port, () => {
-    console.log('http://localhost:%d', port);
+    console.log('http://localhost:%d', process.env.PORT || port);
 })
