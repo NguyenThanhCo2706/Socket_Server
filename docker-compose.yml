@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  app:
+    build: 
+      dockerfile: Dockerfile
+      context: .
+    env_file:
+      - .env
+    ports:
+      - "3001:${APP_PORT}"
+    restart: always
+    volumes:
+      - .:/home/app
